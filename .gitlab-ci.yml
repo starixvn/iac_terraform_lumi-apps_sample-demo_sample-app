@@ -8,6 +8,11 @@
 #     KUBERNETES_CLUSTER                                      #
 #   and any other secrets to be used in HELM_ADDITIONAL_OPTS  #
 ###############################################################
+image:
+  name: $DOCKER_REG_LOCAL_URL/base/hashicorp/terraform:1.4.5
+  entrypoint:
+      - "/usr/bin/env"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 stages:
   - code-quality

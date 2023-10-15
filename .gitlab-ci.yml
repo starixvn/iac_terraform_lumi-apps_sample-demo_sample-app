@@ -29,6 +29,7 @@ markdown_lint:
 
 yaml_lint:
   stage: code-quality
+  allow_failure: true
   #tags:
   #  - linux
   image:

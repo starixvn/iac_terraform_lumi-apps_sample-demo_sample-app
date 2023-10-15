@@ -1,0 +1,8 @@
+---
+container:
+  replicas: 4
+
+ingress:
+  lbGroup: testlab-Lumi-eks
+  host: nexops.luminetsoft.com
+  securityGroup: my-app-alb

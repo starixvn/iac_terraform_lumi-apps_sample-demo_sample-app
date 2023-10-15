@@ -1,6 +1,6 @@
 ---
 container:
-  replicas: 4
+  replicas: 2
 
 ingress:
   lbGroup: my-app-eks

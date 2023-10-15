@@ -5,9 +5,9 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   ports:
-    - port: {{ .Values.container.port }}
-      targetPort: {{ .Values.container.port }}
-      protocol: TCP
-  type: NodePort
+  - port: {{ .Values.container.port }}
+    targetPort: {{ .Values.container.port }}
+    protocol: TCP
+  type: ClusterIP
   selector:
-    app.kubernetes.io/name: {{ .Chart.Name }}
+    app: {{ .Chart.Name }}

@@ -21,16 +21,16 @@ stages:
 
 markdown_lint:
   stage: code-quality
-  tags:
-    - linux
+  #tags:
+  #  - linux
   image: pipelinecomponents/markdownlint:6ff4ccf
   script:
     - mdl --style all --warnings .
 
 yaml_lint:
   stage: code-quality
-  tags:
-    - linux
+  #tags:
+  #  - linux
   image:
     name: cytopia/yamllint:1.20
     entrypoint:

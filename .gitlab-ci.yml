@@ -84,5 +84,6 @@ deploy_development:
       then
         helm uninstall ${APP_NAME} --namespace ${KUBERNETES_NAMESPACE}
       fi
+    - cat helm/config/values-${CI_ENVIRONMENT_NAME}.yaml
     - helm upgrade --install ${APP_NAME} --namespace ${KUBERNETES_NAMESPACE}
       helm/ --values helm/config/values-${CI_ENVIRONMENT_NAME}.yaml

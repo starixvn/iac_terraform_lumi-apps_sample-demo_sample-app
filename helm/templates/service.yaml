@@ -6,7 +6,6 @@ metadata:
 spec:
   ports:
   - port: {{ .Values.container.port }}
-    targetPort: {{ .Values.container.port }}
     protocol: TCP
   type: ClusterIP
   selector:

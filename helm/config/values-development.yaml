@@ -1,22 +1,8 @@
 ---
 container:
-  image: "nginxdemos/hello"
-  tag: "latest"
-  port: 80
   replicas: 4
 
 ingress:
-  lbGroup: sample-app
-  securityGroup: sg-default
+  lbGroup: my-app-eks
   host: nexops.staging.luminetsoft.com
-  path: /
-  serviceName: sample-app
-  servicePort: 80
-
-#container:
-#  replicas: 4
-
-#ingress:
-#  lbGroup: my-app-eks
-#  host: nexops.staging.luminetsoft.com
-#  securityGroup: my-app-alb
+  securityGroup: my-app-alb

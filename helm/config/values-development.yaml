@@ -3,6 +3,4 @@ container:
   replicas: 2
 
 ingress:
-  lbGroup: my-app-eks
   host: echo.luminetsoft.com
-  securityGroup: my-app-alb

@@ -4,5 +4,5 @@ container:
 
 ingress:
   lbGroup: my-app-eks
-  host: nexops.staging.luminetsoft.com
+  host: echo.luminetsoft.com
   securityGroup: my-app-alb

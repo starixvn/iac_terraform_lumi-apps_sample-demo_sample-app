@@ -8,7 +8,7 @@ container:
 ingress:
   lbGroup: sample-app
   securityGroup: sg-default
-  host: minikube.local
+  host: echo.luminetsoft.com
   path: /
   serviceName: sample-app
   servicePort: 80

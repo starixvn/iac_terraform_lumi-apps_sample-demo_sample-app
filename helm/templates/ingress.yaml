@@ -3,12 +3,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}-ingress-rules
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
+#  annotations:
+#    alb.ingress.kubernetes.io/scheme: internet-facing
+#    alb.ingress.kubernetes.io/target-type: ip
 #    alb.ingress.kubernetes.io/security-groups: {{ .Values.ingress.securityGroup }}
 spec:
-  ingressClassName: alb
+  ingressClassName: haproxy
   rules:
     - host: {{ .Values.ingress.host }}
       http:

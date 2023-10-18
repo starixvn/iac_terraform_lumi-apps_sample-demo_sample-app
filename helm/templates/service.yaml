@@ -7,6 +7,7 @@ spec:
   ports:
   - port: {{ .Values.container.port }}
     protocol: TCP
+    targetPort: {{ .Values.container.port }}
   type: ClusterIP
   selector:
     app: {{ .Chart.Name }}

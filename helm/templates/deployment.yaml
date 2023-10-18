@@ -5,8 +5,7 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   selector:
-    matchLabels:
-      app.kubernetes.io/name: {{ .Chart.Name }}
+    app: {{ .Chart.Name }}
   replicas: {{ .Values.container.replicas }}
   template:
     metadata:

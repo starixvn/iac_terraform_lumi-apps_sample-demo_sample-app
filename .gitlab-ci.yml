@@ -69,7 +69,7 @@ deploy_development:
   image: devth/helm:v3.2.4
   environment:
     name: development
-  #when: manual
+  when: manual
   variables:
     APP_NAME: "sample-app"
     KUBERNETES_NAMESPACE: "sample-apps"
@@ -93,7 +93,7 @@ deploy_local:
   image: devth/helm:v3.2.4
   environment:
     name: local
-  #when: manual
+  when: manual
   variables:
     APP_NAME: "sample-app"
     KUBERNETES_NAMESPACE: "sample-apps"

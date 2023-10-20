@@ -1,0 +1,6 @@
+---
+container:
+  replicas: 2
+
+ingress:
+  host: echo.lumigame.com

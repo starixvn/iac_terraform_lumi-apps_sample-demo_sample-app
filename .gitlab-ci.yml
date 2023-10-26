@@ -54,7 +54,7 @@ pre_deploy_development:
     name: development
   variables:
     APP_NAME: "sample-app"
-    KUBERNETES_NAMESPACE: "sample-apps"
+    KUBERNETES_NAMESPACE: "sample"
   before_script:
     - apk add py-pip --update
     - pip install awscli
@@ -72,7 +72,7 @@ deploy_development:
   when: manual
   variables:
     APP_NAME: "sample-app"
-    KUBERNETES_NAMESPACE: "sample-apps"
+    KUBERNETES_NAMESPACE: "sample"
   before_script:
     - apk add py-pip --update
     - pip install awscli
@@ -96,7 +96,7 @@ deploy_local:
   when: manual
   variables:
     APP_NAME: "sample-app"
-    KUBERNETES_NAMESPACE: "sample-apps"
+    KUBERNETES_NAMESPACE: "sample"
   before_script:
     - apk add py-pip --update
     - pip install awscli

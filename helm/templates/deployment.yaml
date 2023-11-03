@@ -25,6 +25,6 @@ spec:
         - name: {{ .Values.container.volume.name }}
           mountPath: {{ .Values.container.volume.mountPath }}
       volumes:
-      - name: {{ .Values.container.volumeName }}
+      - name: {{ .Values.container.volume.name }}
         persistentVolumeClaim:
           claimName: {{ .Values.container.pvClaim.name }}

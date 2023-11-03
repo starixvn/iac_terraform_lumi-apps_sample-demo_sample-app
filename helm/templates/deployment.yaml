@@ -21,3 +21,10 @@ spec:
         imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: {{ .Values.container.port }}
+        volumeMounts:
+        - name: {{ .Values.container.volume.name }}
+          mountPath: {{ .Values.container.volume.mountPath }}
+      volumes:
+      - name: {{ .Values.container.volumeName }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.container.pvClaim.name }}

@@ -4,6 +4,14 @@ container:
   tag: "latest"
   port: 80
   replicas: 1
+  volume: 
+    name: "volume-sample-app"
+    mountPath: "/tmp"
+  pvClaim: 
+    name: "sample-claim"
+    size: 1Gi
+  
+
 
 ingress:
   lbGroup: sample-app

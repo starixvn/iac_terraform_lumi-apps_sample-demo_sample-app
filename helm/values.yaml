@@ -9,7 +9,7 @@ container:
     mountPath: "/tmp"
   pvClaim: 
     name: "sample-claim"
-    size: 1Gi
+    size: 8Gi
   
 
 

@@ -77,7 +77,7 @@ deploy_development:
     - apk add py-pip --update
     - pip install awscli
     - aws eks --region ${AWS_DEFAULT_REGION} update-kubeconfig
-      --name ${KUBERNETES_CLUSTER}
+      --name lumi-testlab-eks
   script:
     - |
       if [ ${REMOVE} ]
@@ -101,7 +101,7 @@ deploy_local:
     - apk add py-pip --update
     - pip install awscli
     - aws eks --region ${AWS_DEFAULT_REGION} update-kubeconfig
-      --name ${KUBERNETES_CLUSTER}
+      --name lumi-local-eks
   script:
     - |
       if [ ${REMOVE} ]
